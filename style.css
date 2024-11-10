@@ -1,0 +1,84 @@
+body{
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background: linear-gradient(to bottom, lightgreen, lightblue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: rgba(240, 255, 254, 0.87);
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 600px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 300px;  /* Ensures it doesn't collapse too much when no images */
+    transition: height 0.3s ease;  /* Smooth transition when gallery expands */
+}
+
+h1, h2{
+    font-weight: 400;
+}
+
+.input{
+    padding: 20px 10px;
+    font-size: 18px;
+    background-color: white;
+    border-radius: 5px;
+    text-align: center;
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+.errorMessage{
+    color: red;
+    font-weight: 600;
+    margin: 10px;
+    display: none;
+}
+
+.btn{
+    text-transform: uppercase;
+    width: 250px;
+    height: 45px;
+    margin: 20px 0;
+    font-size: 18px;
+    border-radius: 5px;
+    color: black;
+    background-color: #4CAF50;
+    border: none;
+}
+
+.btn:hover{
+    color: aliceblue;
+    background-color: green;
+    cursor: pointer;
+    transition: background-color 300ms ease-in-out;
+}
+
+/* Gallery container */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;            /* Allow wrapping of images */
+    justify-content: center;    /* Center images horizontally */
+    gap: 10px;                 /* Spacing between images */
+    margin-top: 20px;          /* Space between the button and gallery */
+}
+
+/* Gallery images */
+.gallery img {
+    width: 160px;              /* Fixed width for all images */
+    height: 160px;             /* Fixed height for all images */
+    object-fit: cover;         /* Maintain aspect ratio while filling the container */
+    border-radius: 5px;
+    box-sizing: border-box;
+}
